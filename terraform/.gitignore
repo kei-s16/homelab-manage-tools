@@ -1,5 +1,4 @@
-*.tfstate
-*.tfstate.backup
+*.tfstate*
 *.tfstate.lock.info
 
 *.log
