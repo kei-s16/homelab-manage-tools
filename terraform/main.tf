@@ -1,11 +1,12 @@
 terraform {
   required_providers {
     proxmox = {
-      source = "danitso/proxmox"
+      source = "Telmate/proxmox"
+      version = "2.7.1"
     }
   }
 }
 
 provider "proxmox" {
-  virtual_environment {}
+  pm_tls_insecure = true
 }
