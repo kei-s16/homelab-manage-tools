@@ -1,5 +1,4 @@
 ---
 - hosts: master
   roles:
-    - common
     - upgrade-packages
