@@ -1,12 +1,4 @@
 ---
-- name: rsync local repos
-  become: yes
-  ansible.posix.synchronize:
-    mode: pull
-    src: rsync://{{ local_repo_hostname }}/share_aarch64
-    dest: /var/cache/pacman/pkg/
-    recursive: yes
-
 - name: "Run pacman -Syu"
   become: yes
   remote_user: "{{ ssh_remote_user }}"
@@ -20,3 +12,4 @@
   remote_user: "{{ ssh_remote_user }}"
   when: result is changed
   reboot:
+
