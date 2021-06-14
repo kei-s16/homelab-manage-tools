@@ -36,16 +36,6 @@ resource "proxmox_vm_qemu" "arch_vm" {
   }
 
   lifecycle {
-    ignore_changes = [
-      nameserver,
-      searchdomain,
-      ssh_host,
-      network,
-      disk,
-      ssh_port,
-      qemu_os,
-      ipconfig0,
-      network,
-    ]
+    ignore_changes = all
   }
 }
