@@ -16,3 +16,7 @@
 ```
 $ ansible-playbook -i hosts site.yml --ask-become-pass --diff
 ```
+
+## メモ
+- ctower : terraform とか ansible とか流すやつ。管理用VM
+- desktop : ふだん使いのやつ。
