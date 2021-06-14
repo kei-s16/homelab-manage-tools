@@ -1,0 +1,15 @@
+---
+- name: "Run pacman -Syu"
+  become: yes
+  remote_user: "{{ ssh_remote_user }}"
+  community.general.pacman:
+    update_cache: yes
+    upgrade: yes
+  register: result
+
+- name: reboot
+  become: yes
+  remote_user: "{{ ssh_remote_user }}"
+  when: result is changed
+  reboot:
+

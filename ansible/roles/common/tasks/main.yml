@@ -1,0 +1,7 @@
+---
+- name: "Install rsync"
+  become: yes
+  remote_user: "{{ ssh_remote_user }}"
+  community.general.pacman:
+    name: rsync
+    state: installed
