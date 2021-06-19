@@ -1,4 +1,4 @@
 ---
-- hosts: node
+- hosts: desktop
   roles:
     - upgrade-packages
